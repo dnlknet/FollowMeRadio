@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#292a2a"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#16191a" >
+
+        <!-- new/hits/mix/rus buttons -->
+
+        <RadioGroup
+            android:id="@+id/channelButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:checkedButton="@+id/btn_hits"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/btn_new"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/radiobutton_new"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/btn_hits"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/radiobutton_hits"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/btn_mixes"
+                android:layout_width="77dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/radiobutton_mixes"
+                android:button="@android:color/transparent" />
+
+            <RadioButton
+                android:id="@+id/btn_rus"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/radiobutton_rus"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/channelButtons"
+            android:background="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/albumImage"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_below="@+id/line1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/album"
+            android:src="@drawable/album" />
+
+        <ImageView
+            android:id="@+id/button_PlayPause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/albumImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_play" />
+
+        <TextView
+            android:id="@+id/trackArtist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_PlayPause"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="9pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/trackTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trackArtist"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/loading"
+            android:textSize="6pt"
+            android:textColor="@android:color/white" 
+          
+            />
+
+        <!-- Volume controls -->
+
+        <RelativeLayout
+            android:id="@+id/volumeControls"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bitrateButtons"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+              android:layout_marginTop="2dp"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp" >
+
+            <SeekBar
+                android:id="@+id/volume"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:max="100"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp"
+                android:progressDrawable="@drawable/volume_progress"
+                android:thumb="@android:color/transparent" />
+        </RelativeLayout>
+
+       
+        <!-- Bitrate controls -->
+
+        <RadioGroup
+            android:id="@+id/bitrateButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:checkedButton="@+id/btn_192"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp" >
+
+            <RadioButton
+                android:id="@+id/btn_32"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:button="@drawable/radiobutton_32"
+                android:paddingRight="10dp" />
+
+            <RadioButton
+                android:id="@+id/btn_64"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:button="@drawable/radiobutton_64"
+                android:paddingRight="10dp" />
+
+            <RadioButton
+                android:id="@+id/btn_128"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:button="@drawable/radiobutton_128"
+                android:paddingRight="10dp" />
+
+            <RadioButton
+                android:id="@+id/btn_192"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:button="@drawable/radiobutton_192"
+                android:paddingRight="10dp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+</LinearLayout>

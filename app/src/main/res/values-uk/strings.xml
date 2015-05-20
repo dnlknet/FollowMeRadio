@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Follow Me</string>
+    <string name="title_activity_main">Follow Me</string>
+    <string name="loading">Завантаження&#8230;</string>
+    <string name="noconnection">Немає з`єднання</string>
+    <string name="whatwithinternet">Що там у Вас з iнтернетом?</string>
+
+
+</resources>

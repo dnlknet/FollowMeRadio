@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Follow Me</string>
+    <string name="title_activity_main">Follow Me</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="noconnection">No connection</string>
+    <string name="whatwithinternet">What`s happening with your network?</string>
+
+
+</resources>
